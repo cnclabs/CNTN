@@ -10,6 +10,9 @@ Most importantly, we model semantics down to the character level to capture morp
 
 ### 1.2. Datasets
 
+We provide two dataset, SemEval2013 and Inspec, and the original version is from
+https://github.com/snkim/AutomaticKeyphraseExtraction
+
 ### 1.3. Getting Started
 #### Download
 ```
@@ -23,6 +26,10 @@ $ pip install -r requirements.txt
 ```
 
 ## 2. Usage
+### 2.1 Preprocess 
+Data preporcessing is following by 
+https://github.com/Tixierae/EMNLP_2016
+
 ## 3. Citation
 ```
 ```
