@@ -59,27 +59,17 @@ Arguments
 
 optional arguments:
   -h, --help            show this help message and exit
-  --dlen DLEN, -dl DLEN
-                        doc len
-  --wlen WLEN, -wl WLEN
-                        word len
-  --wdim WDIM, -wd WDIM
-                        word dim
-  --hdim HDIM, -hd HDIM
-                        hidden dim
-  --label LABEL, -l LABEL
-                        output label
-  --flen FLEN, -fl FLEN
-                        filter length
-  --c C, -c C           channel size
-  --b B, -b B           batch size
-  --e E, -e E           epoch
-  --model MODEL, -model MODEL
-                        path of model
-  --train TRAIN, -train TRAIN
-                        path of training data
-  --predict PREDICT, -predict PREDICT
-                        path of predicted data
+  --dlen, -dl           doc length                  default=300
+  --wlen, -wl           word length                 default=30
+  --wdim, -wd           word dimension              default=27
+  --hdim, -hd           dimension of hidden layer   default=50
+  --flen, -f            filter length               default=3
+  --c, -c               channel size                default=50
+  --b, -b               batch size                  default=64
+  --e, -e               epoch size                  default=50
+  --model, -model       path of model               default=./model
+  --train, -train       path of training data       default=./data/semeval_wo_stem/train.txt
+  --predict, -predict   path of predicted data      default=./data/test.txt
 ```
 
 
