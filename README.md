@@ -13,6 +13,12 @@ Most importantly, we model semantics down to the character level to capture morp
 We provide two dataset, SemEval2013 and Inspec, and the original version is from
 https://github.com/snkim/AutomaticKeyphraseExtraction
 
+```
+'
+|--data/
+  |--semeval_wo_stem
+  |--semeval_wo_stem
+```
 ### 1.3. Getting Started
 #### Download
 ```
