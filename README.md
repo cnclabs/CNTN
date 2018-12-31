@@ -34,6 +34,9 @@ $ pip install -r requirements.txt
 ```
 
 ## 2. Usage
+The model we provided is trained by **semeval_wo_stem** and is for the documents with stemming and removing stopwords.
+
+
 ### 2.1 Preprocess 
 Data preporcessing is following by 
 https://github.com/Tixierae/EMNLP_2016
