@@ -7,6 +7,7 @@ Most importantly, we model semantics down to the character level to capture morp
 - python2.7
 - Chainer
 - nltk
+
 if using GPU
 - cupy
 
