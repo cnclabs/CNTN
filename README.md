@@ -7,6 +7,8 @@ Most importantly, we model semantics down to the character level to capture morp
 - python2.7
 - Chainer
 - nltk
+if using GPU
+- cupy
 
 ### 1.2. Datasets
 
@@ -17,9 +19,10 @@ https://github.com/snkim/AutomaticKeyphraseExtraction
 |--data/
   |--semeval_wo_stem
   |--inspec_wo_stem
+  |--test.txt
 ```
 
-The dataset we used is from Hulth2003 and SemEval2010 with removing stopwords and stemming.
+The dataset we used is from Hulth2003 and SemEval2010 with removing stopwords and stemming. And it contains a toy testing document.
 
 ### 1.3. Getting Started
 #### Download
@@ -55,24 +58,26 @@ $ python predict.py
 ```
 $ python train.py -h
 usage: Training [-h] [--dlen DLEN] [--wlen WLEN] [--wdim WDIM] [--hdim HDIM]
-                [--label LABEL] [--flen FLEN] [--c C] [--b B] [--e E]
+                [--label LABEL] [--flen FLEN] [--channel CHANNEL]
+                [--batch BATCH] [--epoch EPOCH] [--gpu GPU] 
                 [--model MODEL] [--train TRAIN] [--predict PREDICT]
 
 Arguments
 
 optional arguments:
   -h, --help            show this help message and exit
-  --dlen, -dl           doc length                  default=300
-  --wlen, -wl           word length                 default=30
-  --wdim, -wd           word dimension              default=27
-  --hdim, -hd           dimension of hidden layer   default=50
-  --flen, -f            filter length               default=3
-  --c, -c               channel size                default=50
-  --b, -b               batch size                  default=64
-  --e, -e               epoch size                  default=50
-  --model, -model       path of model               default=./model
-  --train, -train       path of training data       default=./data/semeval_wo_stem/train.txt
-  --predict, -predict   path of predicted data      default=./data/test.txt
+  --dlen,     -dl        doc length                        default=300
+  --wlen,     -wl        word length                       default=30
+  --wdim,     -wd        word dimension                    default=27
+  --hdim,     -hd        dimension of hidden layer         default=50
+  --flen,     -f         filter length                     default=3
+  --channel,  -c         channel size                      default=50
+  --batch,    -b         batch size                        default=64
+  --epoch,    -e         epoch size                        default=50
+  --gpu,      -g         gpu device(-1=cpu, 0,1,...=gpu)   default=0  
+  --model,    -model     path of model                     default=./model
+  --train,    -train     path of training data             default=./data/semeval_wo_stem/train.txt
+  --predict,  -predict   path of predicted data            default=./data/test.txt
 ```
 
 
