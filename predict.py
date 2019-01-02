@@ -19,9 +19,9 @@ n_label = arg.label
 filter_length = arg.flen
 filter_width = word_len
 filter_height = word_dim
-output_channel = arg.c
-batch_size = arg.b
-n_epoch = arg.e
+output_channel = arg.channel
+batch_size = arg.batch
+n_epoch = arg.epoch
 model_url = arg.model
 
 ###load dataset

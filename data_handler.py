@@ -29,7 +29,7 @@ def load_data( articles, doc_len, word_len, token='_' ):
 		doc = nltk.word_tokenize(_[0])
 
 		keyword = _[1]
-		labels.append( _[2] )
+		labels.append( int(_[2]) )
 
 		docVec = map(wm.vector, doc)
 		docVec = array(docVec)
@@ -68,8 +68,10 @@ def load_corpus( corpus, doc_len, word_len):
 
 	doc = corpus
 	doc = util.normalizeString(doc)
+	### preprocessing
 	doc = nltk.word_tokenize(doc)
-
+	doc = filter(None, map(util.removeStop, doc))
+	###
 	words = list(set(doc))
 
 	docVec = map(wm.vector, doc)

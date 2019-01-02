@@ -1,6 +1,9 @@
+import re
 import sys
 import time
-import re
+from nltk.corpus import stopwords
+
+stop = set(stopwords.words('english'))
 
 def normalizeString(string):
 	string = re.sub(r"[^A-Za-z0-9(),!?\'\`]", " ", string)     
@@ -18,6 +21,11 @@ def normalizeString(string):
 	string = re.sub(r"\?", " ? ", string) 
 	string = re.sub(r"\s{2,}", " ", string)   
 	return string.strip().lower()
+
+
+def removeStop(word):
+	if word not in stop:
+		return word
 
 
 def key2value( target, dic ):
