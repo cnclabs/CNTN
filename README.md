@@ -84,4 +84,13 @@ optional arguments:
 
 ## 3. Citation
 ```
+@inbook{inbook,
+author = {Lin, Zhe-Li and Wang, Chuan-Ju},
+year = {2019},
+month = {03},
+pages = {400-413},
+title = {Keyword Extraction with Character-Level Convolutional Neural Tensor Networks},
+isbn = {978-3-030-16141-5},
+doi = {10.1007/978-3-030-16148-4_31}
+}
 ```
